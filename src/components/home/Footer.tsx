@@ -1,9 +1,16 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Twitter, Facebook, Linkedin, Instagram } from 'lucide-react';
+import { Twitter, Facebook, Linkedin, Instagram, Grid3X3 } from 'lucide-react';
 
 export const Footer: React.FC = () => {
+  const scrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+  
   return (
     <footer className="bg-[#FE5F20] text-white">
       <div className="container mx-auto py-12 px-4 md:px-8 lg:px-20">
@@ -24,21 +31,36 @@ export const Footer: React.FC = () => {
               Quick Links
             </h3>
             <nav className="mt-4 flex flex-col gap-2">
-              <Link to="/" className="hover:text-[rgba(254,85,43,1)] transition-colors">
+              <button 
+                onClick={() => scrollToSection('home')} 
+                className="text-left hover:text-[rgba(254,85,43,1)] transition-colors cursor-pointer">
                 Home
-              </Link>
-              <Link to="/features" className="hover:text-[rgba(254,85,43,1)] transition-colors">
+              </button>
+              <button 
+                onClick={() => scrollToSection('features')} 
+                className="text-left hover:text-[rgba(254,85,43,1)] transition-colors cursor-pointer">
                 Features
-              </Link>
-              <Link to="/pricing" className="hover:text-[rgba(254,85,43,1)] transition-colors">
+              </button>
+              <button 
+                onClick={() => scrollToSection('reviews')} 
+                className="text-left hover:text-[rgba(254,85,43,1)] transition-colors cursor-pointer">
+                Reviews
+              </button>
+              <button 
+                onClick={() => scrollToSection('pricing')} 
+                className="text-left hover:text-[rgba(254,85,43,1)] transition-colors cursor-pointer">
                 Pricing
-              </Link>
-              <Link to="/contact" className="hover:text-[rgba(254,85,43,1)] transition-colors">
-                Contact Us
-              </Link>
-              <Link to="/privacy" className="hover:text-[rgba(254,85,43,1)] transition-colors">
-                Privacy Policy
-              </Link>
+              </button>
+              <button 
+                onClick={() => scrollToSection('challenges')} 
+                className="text-left hover:text-[rgba(254,85,43,1)] transition-colors cursor-pointer">
+                Challenges
+              </button>
+              <button 
+                onClick={() => scrollToSection('faq')} 
+                className="text-left hover:text-[rgba(254,85,43,1)] transition-colors cursor-pointer">
+                FAQ
+              </button>
             </nav>
           </div>
 
@@ -89,6 +111,9 @@ export const Footer: React.FC = () => {
             </a>
             <a href="https://x.com/arthletefit?t=GWYNAoYECF5-OLf7SnTcng&s=09" target="_blank" rel="noopener noreferrer" className="hover:text-[rgba(254,85,43,1)] transition-colors">
               <Twitter className="h-6 w-6" />
+            </a>
+            <a href="https://discord.gg/arthlete" target="_blank" rel="noopener noreferrer" className="hover:text-[rgba(254,85,43,1)] transition-colors">
+              <Grid3X3 className="h-6 w-6" />
             </a>
           </div>
           <p className="text-sm">© 2025 Arthlete. All rights reserved.</p>

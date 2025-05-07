@@ -1,3 +1,4 @@
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -39,4 +40,33 @@
 
 .read-the-docs {
   color: #888;
+}
+
+/* Grid Layout Styles */
+.grid-bg {
+  background-image: linear-gradient(to right, rgba(163, 217, 165, 0.1) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(163, 217, 165, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+.section-with-grid {
+  position: relative;
+}
+
+.section-with-grid::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to right, rgba(163, 217, 165, 0.1) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(163, 217, 165, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+  pointer-events: none;
+}
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
 }

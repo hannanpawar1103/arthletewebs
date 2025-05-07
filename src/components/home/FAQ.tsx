@@ -36,19 +36,30 @@ export const FAQ: React.FC = () => {
   ];
 
   return (
-    <section className="py-16 px-4 md:px-8 lg:px-20 bg-white">
+    <section className="py-16 px-4 md:px-8 lg:px-20 bg-white section-with-grid">
       <div className="container mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-center uppercase mb-12">
           Frequently Asked Questions
         </h2>
         
-        <div className="max-w-3xl mx-auto">
-          <Accordion type="single" collapsible className="w-full space-y-4">
+        <div className="max-w-3xl mx-auto relative">
+          {/* Grid pattern for FAQ section */}
+          <div className="absolute inset-0 grid grid-cols-3 w-full h-full pointer-events-none">
+            {Array.from({ length: 3 }).map((_, colIndex) => (
+              <div key={colIndex} className="h-full border-r border-[#A3D9A5] border-opacity-20 last:border-r-0"></div>
+            ))}
+            {Array.from({ length: faqs.length + 1 }).map((_, rowIndex) => (
+              <div key={rowIndex} className="w-full border-b border-[#A3D9A5] border-opacity-20 absolute" 
+                  style={{ top: `${(rowIndex) * (100 / faqs.length)}%` }}></div>
+            ))}
+          </div>
+
+          <Accordion type="single" collapsible className="w-full space-y-4 relative z-10">
             {faqs.map((faq, index) => (
               <AccordionItem 
                 key={index} 
                 value={`item-${index}`}
-                className="border border-[#EEF8D3] rounded-lg overflow-hidden"
+                className="border border-[#EEF8D3] rounded-lg overflow-hidden bg-white/90"
               >
                 <AccordionTrigger className="px-6 py-4 text-lg font-semibold text-left hover:bg-[#F6FBE9]">
                   {faq.question}

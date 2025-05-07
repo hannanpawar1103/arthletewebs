@@ -45,7 +45,7 @@ export const Pricing: React.FC = () => {
   ];
 
   return (
-    <section className="py-16 px-4 md:px-8 lg:px-20 bg-[#F6FBE9]">
+    <section className="py-16 px-4 md:px-8 lg:px-20 bg-[#F6FBE9] section-with-grid">
       <div className="container mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-neutral-800">
@@ -86,11 +86,21 @@ export const Pricing: React.FC = () => {
           Save 15% on Yearly Plans
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+          {/* Grid pattern overlay */}
+          <div className="absolute inset-0 grid grid-cols-6 w-full h-full pointer-events-none">
+            {Array.from({ length: 6 }).map((_, colIndex) => (
+              <div key={colIndex} className="h-full border-r border-[#A3D9A5] border-opacity-20 last:border-r-0"></div>
+            ))}
+            {Array.from({ length: 4 }).map((_, rowIndex) => (
+              <div key={rowIndex} className="w-full border-b border-[#A3D9A5] border-opacity-20 absolute" style={{ top: `${(rowIndex + 1) * 25}%` }}></div>
+            ))}
+          </div>
+
           {plans.map((plan, index) => (
             <div
               key={index}
-              className={`bg-white rounded-lg overflow-hidden shadow-sm border ${plan.popular ? 'border-[#FE5F20]' : 'border-[#EEF8D3]'}`}
+              className={`bg-white rounded-lg overflow-hidden shadow-sm border relative z-10 ${plan.popular ? 'border-[#FE5F20] transform scale-105 md:scale-105' : 'border-[#EEF8D3]'}`}
             >
               {plan.popular && (
                 <div className="bg-[#FE5F20] text-white text-center py-1 text-xs font-medium">
@@ -127,7 +137,7 @@ export const Pricing: React.FC = () => {
                 
                 <Link to="/coming-soon">
                   <button 
-                    className="w-full py-3 bg-[rgba(254,95,32,0.75)] hover:bg-[#FE5F20] text-neutral-800 font-semibold rounded-md transition-colors">
+                    className={`w-full py-3 ${plan.popular ? 'bg-[#FE5F20] hover:bg-[#e55624]' : 'bg-[rgba(254,95,32,0.75)] hover:bg-[#FE5F20]'} text-neutral-800 font-semibold rounded-md transition-colors`}>
                     Choose Plan
                   </button>
                 </Link>

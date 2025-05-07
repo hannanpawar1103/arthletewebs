@@ -54,7 +54,7 @@ export const Reviews: React.FC = () => {
   };
 
   return (
-    <section className="py-16 px-4 md:px-8 lg:px-20">
+    <section className="py-16 px-4 md:px-8 lg:px-20 bg-[#F6FBE9]">
       <div className="container mx-auto">
         <div className="mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-center">
@@ -65,11 +65,23 @@ export const Reviews: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+        {/* Light green grid layout */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 relative">
+          {/* Grid pattern overlay */}
+          <div className="absolute inset-0 grid grid-cols-4 w-full h-full pointer-events-none">
+            {Array.from({ length: 4 }).map((_, colIndex) => (
+              <div key={colIndex} className="h-full border-r border-[#A3D9A5] border-opacity-20 last:border-r-0"></div>
+            ))}
+            {Array.from({ length: 3 }).map((_, rowIndex) => (
+              <div key={rowIndex} className="w-full border-b border-[#A3D9A5] border-opacity-20 absolute" style={{ top: `${(rowIndex + 1) * 33.33}%` }}></div>
+            ))}
+          </div>
+
+          {/* Review cards */}
           {reviews.map((review, index) => (
             <div
               key={index}
-              className={`${review.bgColor} rounded-xl p-6 shadow-sm`}
+              className={`${review.bgColor} rounded-xl p-6 shadow-sm relative z-10 hover:shadow-md transition-shadow`}
             >
               <h3 className="text-xl font-bold">{review.text}</h3>
               <p className="mt-3 text-sm">{review.content}</p>

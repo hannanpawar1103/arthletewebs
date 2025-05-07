@@ -53,11 +53,23 @@ export const Features: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Light green grid layout */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative">
+          {/* Grid pattern overlay */}
+          <div className="absolute inset-0 grid grid-cols-6 w-full h-full pointer-events-none">
+            {Array.from({ length: 6 }).map((_, colIndex) => (
+              <div key={colIndex} className="h-full border-r border-[#A3D9A5] border-opacity-20 last:border-r-0"></div>
+            ))}
+            {Array.from({ length: 4 }).map((_, rowIndex) => (
+              <div key={rowIndex} className="w-full border-b border-[#A3D9A5] border-opacity-20 absolute" style={{ top: `${(rowIndex + 1) * 25}%` }}></div>
+            ))}
+          </div>
+
+          {/* Feature cards */}
           {features.map((feature, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg p-6 shadow-sm border border-[#E5F5BD]"
+              className="bg-white rounded-lg p-6 shadow-sm border border-[#E5F5BD] relative z-10 hover:shadow-md transition-shadow"
             >
               <div className="flex items-center gap-4 mb-4">
                 <div className={`${feature.bgColor} p-3 rounded-lg`}>
