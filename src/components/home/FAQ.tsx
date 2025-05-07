@@ -1,0 +1,62 @@
+import React, { useState } from 'react';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+
+export const FAQ: React.FC = () => {
+  const faqs = [
+    {
+      question: "How does the AI motion tracking work?",
+      answer: "Our AI technology uses your device's camera to analyze your movements in real-time, providing instant feedback on form and technique. The system compares your movements to our database of correct exercise forms to help you achieve optimal results safely."
+    },
+    {
+      question: "Do I need any equipment to use Arthlete?",
+      answer: "No special equipment is required! Just your smartphone or tablet with a camera. Some workouts may suggest basic equipment like dumbbells or resistance bands, but we offer plenty of bodyweight exercises too."
+    },
+    {
+      question: "Can I use Arthlete for free?",
+      answer: "Yes! We offer a free version with basic features and workout tracking. Premium features like advanced AI tracking and personalized plans are available with our paid subscriptions."
+    },
+    {
+      question: "How are winners selected in the weekly challenges?",
+      answer: "Winners are selected based on a combination of factors including form accuracy, consistency, and completion rate. Our AI system tracks these metrics objectively to ensure fair competition."
+    },
+    {
+      question: "Is my workout data private?",
+      answer: "Absolutely! We take your privacy seriously. Your personal data and workout information are encrypted and stored securely. We never share your information without your explicit consent."
+    },
+    {
+      question: "Can I cancel my subscription anytime?",
+      answer: "Yes, you can cancel your subscription at any time. Your access will continue until the end of your current billing period."
+    },
+    {
+      question: "Does Arthlete record or store my camera footage?",
+      answer: "No, we don't store your camera footage. The AI analysis happens in real-time on your device, and only anonymous movement data is processed for improving our algorithms."
+    }
+  ];
+
+  return (
+    <section className="px-20 py-10 max-md:px-5">
+      <h2 className="text-black text-[40px] font-bold text-center uppercase mb-10">
+        FREQUENTLY ASKED QUESTIONS
+      </h2>
+      <div className="max-w-3xl mx-auto">
+        <Accordion type="single" collapsible className="w-full">
+          {faqs.map((faq, index) => (
+            <AccordionItem key={index} value={`item-${index}`}>
+              <AccordionTrigger className="text-xl text-black font-bold uppercase">
+                {faq.question}
+              </AccordionTrigger>
+              <AccordionContent className="text-[#333] text-base font-medium">
+                {faq.answer}
+              </AccordionContent>
+            </AccordionItem>
+          ))}
+        </Accordion>
+      </div>
+    </section>
+  );
+};
