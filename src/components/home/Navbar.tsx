@@ -20,9 +20,14 @@ export const Navbar: React.FC = () => {
           <Link to="/reviews" className="text-white font-medium text-sm md:text-base">Reviews</Link>
           <Link to="/pricing" className="text-white font-medium text-sm md:text-base">Pricing</Link>
           <Link to="/faq" className="text-white font-medium text-sm md:text-base">FAQ</Link>
-          <Link to="/download" className="bg-white text-neutral-800 px-4 py-2 rounded-md font-medium text-sm md:text-base">
+          <a 
+            href="https://forms.gle/RHsTMRrQkHoToqxXA" 
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-white text-neutral-800 px-4 py-2 rounded-md font-medium text-sm md:text-base"
+          >
             Download
-          </Link>
+          </a>
         </div>
       </div>
     </nav>

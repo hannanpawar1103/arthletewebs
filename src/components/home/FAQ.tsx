@@ -30,10 +30,6 @@ export const FAQ: React.FC = () => {
       answer: "Absolutely! We take your privacy seriously. Your personal data and workout information are encrypted and stored securely. We never share your information without your explicit consent."
     },
     {
-      question: "Can I cancel my subscription anytime?",
-      answer: "Yes, you can cancel your subscription at any time. Your access will continue until the end of your current billing period."
-    },
-    {
       question: "Does Arthlete record or store my camera footage?",
       answer: "No, we don't store your camera footage. The AI analysis happens in real-time on your device, and only anonymous movement data is processed for improving our algorithms."
     }

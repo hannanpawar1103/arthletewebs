@@ -1,5 +1,6 @@
 
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export const Pricing: React.FC = () => {
   const [isYearly, setIsYearly] = useState(false);
@@ -124,10 +125,12 @@ export const Pricing: React.FC = () => {
                   ))}
                 </ul>
                 
-                <button 
-                  className="w-full py-3 bg-[rgba(254,95,32,0.75)] hover:bg-[#FE5F20] text-neutral-800 font-semibold rounded-md transition-colors">
-                  Choose Plan
-                </button>
+                <Link to="/coming-soon">
+                  <button 
+                    className="w-full py-3 bg-[rgba(254,95,32,0.75)] hover:bg-[#FE5F20] text-neutral-800 font-semibold rounded-md transition-colors">
+                    Choose Plan
+                  </button>
+                </Link>
               </div>
             </div>
           ))}

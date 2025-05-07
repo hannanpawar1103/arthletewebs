@@ -15,14 +15,16 @@ export const Hero: React.FC = () => {
             Welcome to Arthlete, your intelligent training companion that helps you move better, grow stronger, and stay consistent. Whether you're at home, school, or on the go, our motion-tracking AI guides you with real-time feedback, personalized assessments, and progress tracking — all designed to make fitness fun, smart, and effective. Start your transformation today with science-backed coaching that evolves with you.
           </p>
           <div className="flex gap-4">
-            <Link to="/start" 
+            <a href="https://forms.gle/RHsTMRrQkHoToqxXA" 
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-[#FE5F20] text-white px-6 py-3 rounded-md font-semibold hover:bg-[#e55419] transition-colors flex items-center gap-2">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
               Start Training
-            </Link>
+            </a>
           </div>
           
           <div className="flex items-center gap-4 mt-8">
