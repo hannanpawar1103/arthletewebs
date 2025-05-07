@@ -11,7 +11,7 @@ export const Hero: React.FC = () => {
           <h1 className="text-4xl md:text-5xl font-bold text-[#1A3129] leading-tight">
             AI-Powered Motion Tracking
           </h1>
-          <p className="text-[#333] text-base md:text-lg">
+          <p className="text-[#333] text-[15px]">
             Welcome to Arthlete, your intelligent training companion that helps you move better, grow stronger, and stay consistent. Whether you're at home, school, or on the go, our motion-tracking AI guides you with real-time feedback, personalized assessments, and progress tracking — all designed to make fitness fun, smart, and effective. Start your transformation today with science-backed coaching that evolves with you.
           </p>
           <div className="flex gap-4">
@@ -43,8 +43,8 @@ export const Hero: React.FC = () => {
         
         <div className="flex justify-center md:justify-end">
           <img 
-            src="/lovable-uploads/9763d7d7-3aa0-492c-8f09-043116515266.png" 
-            alt="Arthlete App Interface" 
+            src="/lovable-uploads/1245b779-a8b3-411d-9e77-dc586df7a61c.png" 
+            alt="Arthlete App" 
             className="max-w-[280px] md:max-w-xs lg:max-w-sm"
           />
         </div>
