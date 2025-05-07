@@ -1,6 +1,7 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Twitter, Youtube, Discord } from 'lucide-react';
+import { Twitter, Facebook, Linkedin, Instagram } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   return (
@@ -77,14 +78,17 @@ export const Footer: React.FC = () => {
         
         <div className="mt-12 pt-8 border-t border-[rgba(255,255,255,0.15)] text-center">
           <div className="flex justify-center gap-6 mb-6">
-            <a href="#" className="hover:text-[rgba(254,85,43,1)] transition-colors">
-              <Discord className="h-6 w-6" />
+            <a href="https://www.facebook.com/share/16YLwAJvj6/" target="_blank" rel="noopener noreferrer" className="hover:text-[rgba(254,85,43,1)] transition-colors">
+              <Facebook className="h-6 w-6" />
             </a>
-            <a href="#" className="hover:text-[rgba(254,85,43,1)] transition-colors">
+            <a href="https://www.instagram.com/arthlete.fit?igsh=Y2NsajJ0bmllcmFm" target="_blank" rel="noopener noreferrer" className="hover:text-[rgba(254,85,43,1)] transition-colors">
+              <Instagram className="h-6 w-6" />
+            </a>
+            <a href="https://www.linkedin.com/company/arthlete/" target="_blank" rel="noopener noreferrer" className="hover:text-[rgba(254,85,43,1)] transition-colors">
+              <Linkedin className="h-6 w-6" />
+            </a>
+            <a href="https://x.com/arthletefit?t=GWYNAoYECF5-OLf7SnTcng&s=09" target="_blank" rel="noopener noreferrer" className="hover:text-[rgba(254,85,43,1)] transition-colors">
               <Twitter className="h-6 w-6" />
-            </a>
-            <a href="#" className="hover:text-[rgba(254,85,43,1)] transition-colors">
-              <Youtube className="h-6 w-6" />
             </a>
           </div>
           <p className="text-sm">© 2025 Arthlete. All rights reserved.</p>
