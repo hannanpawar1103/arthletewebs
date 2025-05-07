@@ -11,7 +11,7 @@ import { Footer } from '@/components/home/Footer';
 
 const Index = () => {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen bg-[#F6FBE9]">
       <TopBanner />
       <Navbar />
       <main>

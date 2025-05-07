@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 
 export const Pricing: React.FC = () => {
@@ -6,116 +7,131 @@ export const Pricing: React.FC = () => {
   const plans = [
     {
       title: "Fitness Plan",
-      description: "Get started with AI-powered motion tracking tailored to your workouts. Perfect for solo users looking to improve form and consistency using advanced posture detection.",
+      description: "Get started with AI-powered motion tracking tailored to your workouts. Perfect for solo users looking to improve form and consistency.",
       features: [
         "Real-time form correction",
         "Weekly progress insights",
-        "Weekly fitness challenges"
+        "Weekly fitness challenges",
+        "Basic exercise library"
       ],
       price: isYearly ? 199 : 249,
+      popular: false
     },
     {
       title: "Diet Plan",
       description: "A standalone personalized diet plan built for your fitness goals. Ideal for users who only want nutritional support.",
       features: [
         "Customized meal plans",
-        "Weekly fitness challenges",
         "Weekly nutrition tips",
-        "Direct dietician-curated updates"
+        "Direct dietician-curated updates",
+        "Grocery shopping lists"
       ],
       price: isYearly ? 159 : 199,
+      popular: false
     },
     {
       title: "Ultimate Plan",
-      description: "Unlock the complete Arthlete experience – motion tracking + personalized diet plans. The all-in-one plan for serious transformation.",
+      description: "Unlock the complete Arthlete experience – motion tracking + personalized diet plans. The all-in-one solution.",
       features: [
-        "Everything in Basic",
+        "Everything in Fitness Plan",
         "Everything in Diet Plan",
         "Premium AI Tracker",
-        "Weekly fitness challenges"
+        "Priority customer support"
       ],
       price: isYearly ? 299 : 349,
+      popular: true
     }
   ];
 
   return (
-    <section className="flex flex-col relative min-h-[1028px] w-full overflow-hidden pt-[60px] pb-[166px] px-[70px] max-md:pb-[100px] max-md:px-5">
-      <div className="w-full text-center px-[250px] max-md:max-w-full max-md:px-5">
-        <h2 className="text-neutral-800 text-[38px] font-bold max-md:max-w-full">
-          Our Pricing
-        </h2>
-        <p className="text-[#333] text-base font-medium leading-6 mt-1.5 max-md:max-w-full">
-          We provide flexible, affordable options to support your fitness and wellness journey.
-          Whether you're just starting or going all-in, we've got a plan for you.
-        </p>
-      </div>
-
-      <div className="self-center flex w-[311px] max-w-full flex-col items-stretch mt-10">
-        <div className="border self-center flex items-center text-sm font-semibold whitespace-nowrap p-2.5 rounded-lg border-[rgba(254,95,32,1)] border-solid">
-          <button
-            onClick={() => setIsYearly(false)}
-            className={`self-stretch gap-2.5 px-6 py-2.5 rounded-md max-md:px-5 ${
-              !isYearly
-                ? 'bg-[#234338] text-white'
-                : 'text-[#4C4C4C]'
-            }`}
-          >
-            Monthly
-          </button>
-          <button
-            onClick={() => setIsYearly(true)}
-            className={`self-stretch gap-2.5 px-6 py-2.5 rounded-[100px] max-md:px-5 ${
-              isYearly
-                ? 'bg-[#234338] text-white'
-                : 'text-[#4C4C4C]'
-            }`}
-          >
-            Yearly
-          </button>
+    <section className="py-16 px-4 md:px-8 lg:px-20 bg-[#F6FBE9]">
+      <div className="container mx-auto">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-neutral-800">
+            Our Pricing
+          </h2>
+          <p className="text-[#333] text-base mt-3 max-w-2xl mx-auto">
+            We provide flexible, affordable options to support your fitness and wellness journey.
+            Whether you're just starting or going all-in, we've got a plan for you.
+          </p>
         </div>
-        <div className="text-[#4C4C4D] text-center text-base font-medium mt-2.5">
-          Save 15% on Yearly
-        </div>
-      </div>
 
-      <div className="flex w-full gap-5 flex-wrap mt-10 max-md:max-w-full">
-        {plans.map((plan, index) => (
-          <div
-            key={index}
-            className="border border-[color:var(--Green-90,#EEF8D3)] bg-[#F6FBE9] min-w-60 flex-1 shrink basis-[0%] p-10 rounded-[10px] border-solid max-md:px-5"
-          >
-            <div className="w-full">
-              <h3 className="text-neutral-800 text-2xl font-semibold">
-                {plan.title}
-              </h3>
-              <p className="text-[#4C4C4D] text-base font-medium">
-                Up to 15% off on Yearly Plan
-              </p>
-            </div>
-            <p className="text-neutral-800 text-base font-medium leading-6 mt-[30px]">
-              {plan.description}
-              <br /><br />
-              {plan.features.map((feature, i) => (
-                <React.Fragment key={i}>
-                  {feature}<br />
-                </React.Fragment>
-              ))}
-            </p>
-            <div className="flex w-full flex-col items-stretch mt-[30px]">
-              <div className="flex items-center gap-0.5 whitespace-nowrap justify-center">
-                <div className="text-[#2C5446] text-[40px] font-bold leading-none self-stretch my-auto">
-                  ₹{plan.price}
-                </div>
-                <div className="text-[#333] text-base font-medium self-stretch my-auto">
-                  /month
-                </div>
-              </div>
-              <button className="self-stretch bg-[rgba(254,95,32,0.75)] w-full gap-2.5 text-sm text-neutral-800 font-semibold mt-6 px-6 py-3.5 rounded-md max-md:px-5">
-                Choose Plan
-              </button>
-            </div>
+        <div className="flex justify-center mb-12">
+          <div className="bg-white rounded-full p-1 border border-[#FE5F20] inline-flex">
+            <button
+              onClick={() => setIsYearly(false)}
+              className={`px-6 py-2 rounded-full text-sm font-medium transition ${
+                !isYearly
+                  ? 'bg-[#234338] text-white'
+                  : 'text-[#4C4C4C]'
+              }`}
+            >
+              Monthly
+            </button>
+            <button
+              onClick={() => setIsYearly(true)}
+              className={`px-6 py-2 rounded-full text-sm font-medium transition ${
+                isYearly
+                  ? 'bg-[#234338] text-white'
+                  : 'text-[#4C4C4C]'
+              }`}
+            >
+              Yearly
+            </button>
           </div>
-        ))}
+        </div>
+        
+        <p className="text-center text-sm text-[#4C4C4D] mb-8">
+          Save 15% on Yearly Plans
+        </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {plans.map((plan, index) => (
+            <div
+              key={index}
+              className={`bg-white rounded-lg overflow-hidden shadow-sm border ${plan.popular ? 'border-[#FE5F20]' : 'border-[#EEF8D3]'}`}
+            >
+              {plan.popular && (
+                <div className="bg-[#FE5F20] text-white text-center py-1 text-xs font-medium">
+                  MOST POPULAR
+                </div>
+              )}
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-neutral-800">
+                  {plan.title}
+                </h3>
+                <p className="text-[#4C4C4D] text-sm mt-1">
+                  Up to 15% off on Yearly Plan
+                </p>
+                
+                <div className="flex items-center justify-center my-6">
+                  <span className="text-[#2C5446] text-4xl font-bold">₹{plan.price}</span>
+                  <span className="text-[#333] text-sm ml-1 self-end mb-1">/month</span>
+                </div>
+                
+                <p className="text-[#333] text-sm mb-6">
+                  {plan.description}
+                </p>
+                
+                <ul className="space-y-2 mb-8">
+                  {plan.features.map((feature, i) => (
+                    <li key={i} className="flex items-center">
+                      <svg className="w-4 h-4 text-[#FE5F20] mr-2" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                      <span className="text-sm">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                
+                <button 
+                  className="w-full py-3 bg-[rgba(254,95,32,0.75)] hover:bg-[#FE5F20] text-neutral-800 font-semibold rounded-md transition-colors">
+                  Choose Plan
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

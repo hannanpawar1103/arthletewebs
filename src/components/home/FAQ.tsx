@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+
+import React from 'react';
 import {
   Accordion,
   AccordionContent,
@@ -39,23 +40,30 @@ export const FAQ: React.FC = () => {
   ];
 
   return (
-    <section className="px-20 py-10 max-md:px-5">
-      <h2 className="text-black text-[40px] font-bold text-center uppercase mb-10">
-        FREQUENTLY ASKED QUESTIONS
-      </h2>
-      <div className="max-w-3xl mx-auto">
-        <Accordion type="single" collapsible className="w-full">
-          {faqs.map((faq, index) => (
-            <AccordionItem key={index} value={`item-${index}`}>
-              <AccordionTrigger className="text-xl text-black font-bold uppercase">
-                {faq.question}
-              </AccordionTrigger>
-              <AccordionContent className="text-[#333] text-base font-medium">
-                {faq.answer}
-              </AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
+    <section className="py-16 px-4 md:px-8 lg:px-20 bg-white">
+      <div className="container mx-auto">
+        <h2 className="text-3xl md:text-4xl font-bold text-center uppercase mb-12">
+          Frequently Asked Questions
+        </h2>
+        
+        <div className="max-w-3xl mx-auto">
+          <Accordion type="single" collapsible className="w-full space-y-4">
+            {faqs.map((faq, index) => (
+              <AccordionItem 
+                key={index} 
+                value={`item-${index}`}
+                className="border border-[#EEF8D3] rounded-lg overflow-hidden"
+              >
+                <AccordionTrigger className="px-6 py-4 text-lg font-semibold text-left hover:bg-[#F6FBE9]">
+                  {faq.question}
+                </AccordionTrigger>
+                <AccordionContent className="px-6 py-4 text-[#333] text-base">
+                  {faq.answer}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </div>
       </div>
     </section>
   );
