@@ -16,22 +16,22 @@ const Index = () => {
       <TopBanner />
       <Navbar />
       <main>
-        <section id="home">
+        <section id="home" className="section-with-grid">
           <Hero />
         </section>
-        <section id="features">
+        <section id="features" className="section-with-grid">
           <Features />
         </section>
-        <section id="reviews">
+        <section id="reviews" className="section-with-grid">
           <Reviews />
         </section>
-        <section id="pricing">
+        <section id="pricing" className="section-with-grid">
           <Pricing />
         </section>
-        <section id="challenges" className="challenges-section">
+        <section id="challenges" className="section-with-grid challenges-section">
           <Challenges />
         </section>
-        <section id="faq">
+        <section id="faq" className="section-with-grid">
           <FAQ />
         </section>
       </main>

@@ -3,6 +3,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 export const Navbar: React.FC = () => {
+  const scrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+  
   return (
     <nav className="bg-[#FE5F20] py-4 px-4 md:px-8 lg:px-20">
       <div className="container mx-auto flex items-center justify-between">
@@ -15,11 +22,11 @@ export const Navbar: React.FC = () => {
           <div>Arthlete</div>
         </Link>
         <div className="flex items-center gap-5 md:gap-8">
-          <Link to="/" className="text-white font-medium text-sm md:text-base">Home</Link>
-          <Link to="/features" className="text-white font-medium text-sm md:text-base">Feature</Link>
-          <Link to="/reviews" className="text-white font-medium text-sm md:text-base">Reviews</Link>
-          <Link to="/pricing" className="text-white font-medium text-sm md:text-base">Pricing</Link>
-          <Link to="/faq" className="text-white font-medium text-sm md:text-base">FAQ</Link>
+          <button onClick={() => scrollToSection('home')} className="text-white font-medium text-sm md:text-base">Home</button>
+          <button onClick={() => scrollToSection('features')} className="text-white font-medium text-sm md:text-base">Features</button>
+          <button onClick={() => scrollToSection('reviews')} className="text-white font-medium text-sm md:text-base">Reviews</button>
+          <button onClick={() => scrollToSection('pricing')} className="text-white font-medium text-sm md:text-base">Pricing</button>
+          <button onClick={() => scrollToSection('faq')} className="text-white font-medium text-sm md:text-base">FAQ</button>
           <a 
             href="https://forms.gle/RHsTMRrQkHoToqxXA" 
             target="_blank"
