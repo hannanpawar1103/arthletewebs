@@ -1,8 +1,6 @@
 
 import { useState, useEffect } from 'react';
 import { Card } from "@/components/ui/card";
-import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
-import { Star } from "lucide-react";
 
 interface Review {
   id: number;
@@ -21,7 +19,7 @@ const reviews: Review[] = [
     occupation: "Athlete",
     rating: 4.5,
     headline: "\"It's like having a personal trainer in my pocket\"",
-    comment: "The AI motion tracking is incredibly accurate. It corrected my posture in real-time and actually helped me feel the difference. I don't have to worry about gym timings anymore. Super useful for someone like me who prefers working out at home.",
+    comment: "The AI motion tracking is incredibly accurate. it corrected my posture in real-time and actually helped me feel the difference. I don't have to worry about gym timings anymore. Super useful for someone like me who prefers working out at home.",
     frame: 31
   },
   {
@@ -30,7 +28,7 @@ const reviews: Review[] = [
     occupation: "Student",
     rating: 4,
     headline: "\"Finally, an app that keeps me consistent!\"",
-    comment: "The gamified experience is addictive! Watching my rank go up on the leaderboard every week actually pushes me to work out daily. The points and progress system make fitness fun again.",
+    comment: "The gamified experience is addictive! Watching my rank go up on the leaderboard every week actually pushes me to work out daily. The points and progress system make fitness fun again",
     frame: 31
   },
   {
@@ -53,41 +51,25 @@ const reviews: Review[] = [
   }
 ];
 
-const RatingStars = ({ rating }: { rating: number }) => {
-  return (
-    <div className="flex items-center">
-      {[...Array(5)].map((_, i) => (
-        <Star
-          key={i}
-          size={16}
-          className={i < Math.floor(rating) ? "text-yellow-400 fill-yellow-400" : "text-gray-400"}
-        />
-      ))}
-      <span className="ml-1 text-sm text-gray-400">({rating})</span>
-    </div>
-  );
-};
-
 const ReviewCard = ({ review }: { review: Review }) => {
   return (
     <Card className="bg-black text-white p-6 rounded-xl flex flex-col min-h-[320px] border-none shadow-xl relative">
-      <div className="text-xs text-gray-500 absolute top-6 right-6">Frame {review.frame}</div>
-      <div className="mb-4">
+      <div>
         <h3 className="text-lg font-medium mb-3">{review.headline}</h3>
         <p className="text-sm text-gray-300">{review.comment}</p>
       </div>
       <div className="mt-auto flex items-center pt-4">
-        <div className="w-10 h-10 rounded-full bg-blue-500 flex items-center justify-center text-white font-bold">
+        <div className="w-10 h-10 rounded-full bg-yellow-500 flex items-center justify-center text-white font-bold">
           {review.name.charAt(0)}
         </div>
         <div className="ml-3">
           <p className="font-medium">{review.name}</p>
           <p className="text-sm text-gray-400">{review.occupation}</p>
         </div>
-        <div className="ml-auto">
-          <RatingStars rating={review.rating} />
-        </div>
       </div>
+      {review.frame && (
+        <div className="text-xs text-gray-500 absolute bottom-6 right-6">Frame {review.frame}</div>
+      )}
     </Card>
   );
 };
