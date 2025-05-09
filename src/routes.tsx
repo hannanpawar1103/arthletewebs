@@ -1,23 +1,13 @@
 
-import React from 'react';
-import { createBrowserRouter } from 'react-router-dom';
-import NotFound from './pages/NotFound';
-import ComingSoon from './pages/ComingSoon';
-import Home from './pages/Home';
+import { createBrowserRouter } from "react-router-dom";
+import LandingPage from "./pages/LandingPage";
+import NotFound from "./pages/NotFound";
 
 const router = createBrowserRouter([
   {
-    path: '/',
-    element: <Home />,
+    path: "/",
+    element: <LandingPage />,
     errorElement: <NotFound />,
-  },
-  {
-    path: '/coming-soon',
-    element: <ComingSoon />,
-  },
-  {
-    path: '*',
-    element: <NotFound />,
   },
 ]);
 
