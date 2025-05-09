@@ -84,7 +84,7 @@ export default function Footer() {
         <div className="border-t border-gray-800 pt-8 mt-8">
           <div className="flex flex-col md:flex-row md:justify-between">
             <p className="text-gray-500 text-sm mb-4 md:mb-0">
-              © 2025 Arthlete. All rights reserved.
+              © 2025 ArthleteMotions Pvt Ltd . All rights reserved.
             </p>
             <div className="flex flex-wrap gap-4 text-sm">
               <a href="#" className="text-gray-500 hover:text-blue-400 transition-colors">Terms of Service</a>

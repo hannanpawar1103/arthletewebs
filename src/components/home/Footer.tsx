@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Twitter, Facebook, Linkedin, Instagram, Grid3X3 } from 'lucide-react';
@@ -73,26 +72,20 @@ export const Footer: React.FC = () => {
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
-                <span>info@example.com</span>
+                <span>arthlete.fit@gmail.com</span>
               </div>
               <div className="flex items-center gap-2">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
-                <span>+91 9876543210</span>
+                <span>+91 7208315878</span>
               </div>
               <div className="flex items-center gap-2">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
-                <span>New York, 235 Lane, 10001</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-                <span>Workout Hours: 5AM - 8PM</span>
+                <span>Mira Bhayandar, Thane-401105</span>
               </div>
             </div>
           </div>
@@ -110,13 +103,15 @@ export const Footer: React.FC = () => {
               <Linkedin className="h-6 w-6" />
             </a>
             <a href="https://x.com/arthletefit?t=GWYNAoYECF5-OLf7SnTcng&s=09" target="_blank" rel="noopener noreferrer" className="hover:text-[rgba(254,85,43,1)] transition-colors">
-              <Twitter className="h-6 w-6" />
-            </a>
-            <a href="https://discord.gg/arthlete" target="_blank" rel="noopener noreferrer" className="hover:text-[rgba(254,85,43,1)] transition-colors">
-              <Grid3X3 className="h-6 w-6" />
+              <svg width="40" height="40" viewBox="0 0 59 53" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 fill-current text-white"><rect x="4" y="4" width="51" height="45" rx="8" stroke="currentColor" stroke-width="4" fill="none"/><path d="M16 13L43 40" stroke="currentColor" stroke-width="4" stroke-linecap="round"/><path d="M43 13L16 40" stroke="currentColor" stroke-width="4" stroke-linecap="round"/></svg>
             </a>
           </div>
-          <p className="text-sm">© 2025 Arthlete. All rights reserved.</p>
+          <div className="flex justify-center mb-6">
+            <a href="https://discord.gg/7XdVZpPQ" target="_blank" rel="noopener noreferrer" className="bg-white text-[#FE5F20] rounded-xl px-6 py-2 font-bold text-lg shadow hover:bg-[#f3f3f3] transition-colors">
+              Join Discord Community
+            </a>
+          </div>
+          <p className="text-sm">© 2025 Arthlete Motions. All rights reserved.</p>
         </div>
       </div>
     </footer>
