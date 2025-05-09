@@ -17,7 +17,7 @@ export const Reviews: React.FC = () => {
       author: "Julia Chen",
       avatar: "https://cdn.builder.io/api/v1/image/assets/87f9af2cf9134ae09cac6960a9a0179c/4a5fdb5af0ef3d953de7feb78bd9b1c985b97e49?placeholderIfAbsent=true",
       rating: 5,
-      bgColor: "bg-[#FFB6C1]"
+      bgColor: "bg-[#FFAB76]"
     },
     {
       text: "Life-changing Tool",
@@ -25,7 +25,7 @@ export const Reviews: React.FC = () => {
       author: "Mark Johnson",
       avatar: "https://cdn.builder.io/api/v1/image/assets/87f9af2cf9134ae09cac6960a9a0179c/e16d12c2581447d1d87a5175e71e1bcced911528?placeholderIfAbsent=true",
       rating: 5,
-      bgColor: "bg-[#D8BFD8]"
+      bgColor: "bg-[#FF9B50]"
     },
     {
       text: "Worth Every Penny",
@@ -33,7 +33,7 @@ export const Reviews: React.FC = () => {
       author: "Sara Ahmed",
       avatar: "https://cdn.builder.io/api/v1/image/assets/87f9af2cf9134ae09cac6960a9a0179c/43e95603b1202c82ec634ab40bcce39ac08cbeb8?placeholderIfAbsent=true",
       rating: 4.5,
-      bgColor: "bg-[#ADD8E6]"
+      bgColor: "bg-[#FFC6A1]"
     }
   ];
 
